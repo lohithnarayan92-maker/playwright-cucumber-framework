@@ -1,0 +1,11 @@
+export function getEnv(name: string): string {
+    const value = process.env[name];
+
+    if (!value) {
+        throw new Error(
+            `❌ Required environment variable '${name}' is missing in .env`
+        );
+    }
+
+    return value;
+}
