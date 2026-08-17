@@ -1,30 +1,24 @@
 pipeline {
-
     agent any
 
     stages {
 
-        stage('Checkout') {
+        stage('Build Docker Image') {
             steps {
-                checkout scm
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm ci'
-            }
-        }
-
-        stage('Install Playwright Browser') {
-            steps {
-                sh 'npx playwright install chromium'
+                sh 'docker build -t playwright-cucumber-tests .'
             }
         }
 
         stage('Run Cucumber Tests') {
             steps {
-                sh 'npm run cucumber'
+                sh '''
+                    docker run --rm \
+                      -e BASE_URL="https://opensource-demo.orangehrmlive.com" \
+                      -e BROWSER="chromium" \
+                      -e HEADLESS="true" \
+                      -e TIMEOUT="30000" \
+                      playwright-cucumber-tests
+                '''
             }
         }
     }

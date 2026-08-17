@@ -1,0 +1,319 @@
+Absolutely. 🔥 And this is the right time to introduce GenAI.
+
+You already have the foundation we’re building:
+
+SDET + Automation + Playwright + TypeScript + Cucumber + Docker + GitHub + Jenkins + CI/CD
+
+Now we’ll add GenAI for QA/SDET on top of it—not just “how to use ChatGPT”, but how to build AI-assisted testing solutions that you can actually discuss in an interview.
+
+Our Industry-Ready SDET + GenAI roadmap
+
+                 SDET + GenAI
+                      │
+       ┌──────────────┼──────────────┐
+       ▼              ▼              ▼
+   AI-Assisted     AI for QA      Build AI
+   Development     Automation     Solutions
+       │              │              │
+       ▼              ▼              ▼
+  Copilot/LLMs    Test generation   RAG
+  Prompting       Test analysis     Embeddings
+  Debugging       Self-healing      Vector DB
+  Code review     Failure analysis  AI agents
+       │              │              │
+       └──────────────┼──────────────┘
+                      ▼
+                 CI/CD + AI
+                      │
+                 Jenkins
+                      │
+                 Playwright
+                      │
+                  AI reports
+
+Phase 1 — Become excellent at using GenAI as an SDET
+
+We’ll start here because it immediately improves your productivity.
+
+You’ll learn how to use AI for:
+
+* generating Playwright/Cucumber code
+* converting manual test cases → automation
+* creating XPath/CSS locators
+* debugging failed tests
+* understanding stack traces
+* refactoring code
+* writing API tests
+* SQL generation
+* test-data generation
+* code reviews
+* identifying missing test scenarios
+* generating edge cases
+* creating documentation
+* generating interview-quality explanations
+
+But there’s an important skill:
+
+Don’t ask AI “write code”. Learn to give AI enough engineering context to produce reliable code.
+
+We’ll practice that.
+
+⸻
+
+Phase 2 — LLM fundamentals
+
+You don’t need to become an ML engineer.
+
+For an SDET, understand:
+
+LLM
+
+Large Language Model.
+
+Examples:
+
+* GPT
+* Claude
+* Gemini
+* Llama
+
+Prompt
+
+Instruction/context given to the model.
+
+Tokens
+
+The units the model processes.
+
+Context window
+
+How much information the model can consider in a request.
+
+Temperature
+
+Controls randomness/variation in generation.
+
+Hallucination
+
+When an AI produces information that sounds correct but isn’t grounded in facts.
+
+That last one is very important for testing.
+
+⸻
+
+Phase 3 — AI + Automation
+
+This is where your current framework becomes interesting.
+
+Imagine your test fails:
+
+LoginPage.ts
+locator("input[name='username']")
+
+Tomorrow the application changes it to:
+
+<input id="user-name">
+
+Traditional automation:
+
+❌ locator failed
+❌ test failed
+❌ engineer investigates
+
+AI-assisted automation could potentially:
+
+Test failure
+     ↓
+Analyze DOM
+     ↓
+Compare previous locator
+     ↓
+Identify likely replacement
+     ↓
+Suggest new locator
+     ↓
+Engineer approves
+     ↓
+Update test
+
+This leads into:
+
+Self-healing automation
+
+We’ll study:
+
+* locator healing
+* DOM analysis
+* AI-generated locator suggestions
+* confidence scores
+* human approval
+* risks of automatically changing tests
+
+And we’ll be careful about the distinction between true self-healing and simply asking an LLM to guess a locator.
+
+⸻
+
+Phase 4 — Build an AI testing assistant
+
+This is where I want to take you eventually.
+
+We’ll build a small project around your existing framework:
+
+              AI Test Assistant
+                     │
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+   Test Generator  Failure AI   Test Review
+        │            │            │
+        ▼            ▼            ▼
+   Playwright     Stack trace   Coverage
+   scenarios      analysis      gaps
+
+For example:
+
+You give it:
+
+"User should be able to reset password"
+
+AI generates:
+
+Positive scenarios
+Negative scenarios
+Boundary cases
+Security cases
+API scenarios
+UI scenarios
+Test data
+
+Then we can transform selected scenarios into:
+
+Feature
+   ↓
+Cucumber
+   ↓
+Step definitions
+   ↓
+Page Object
+   ↓
+Playwright
+
+That’s a very strong portfolio project.
+
+⸻
+
+Phase 5 — RAG
+
+Then we’ll introduce one of the most important GenAI concepts for enterprise applications:
+
+RAG — Retrieval-Augmented Generation
+
+Instead of asking an LLM:
+
+“What are our application requirements?”
+
+we give it access to your actual:
+
+Requirements
+Test cases
+API documentation
+Architecture documents
+Defects
+Release notes
+
+Then:
+
+User question
+      ↓
+Retrieve relevant information
+      ↓
+LLM
+      ↓
+Grounded answer
+
+This is much more useful in enterprise QA than a generic chatbot.
+
+⸻
+
+Phase 6 — AI Agents
+
+Eventually we’ll cover:
+
+AI Agent
+   │
+   ├── Understand task
+   ├── Inspect application
+   ├── Decide action
+   ├── Call tool
+   ├── Analyze result
+   ├── Decide next action
+   └── Produce result
+
+For example:
+
+“Analyze the latest failed regression and identify the top three likely causes.”
+
+The agent could potentially:
+
+Jenkins
+  ↓
+Test report
+  ↓
+Failure logs
+  ↓
+Screenshots
+  ↓
+Git commit
+  ↓
+LLM analysis
+  ↓
+Failure classification
+
+That starts looking like a real AI-powered QA platform rather than simply “using ChatGPT”.
+
+⸻
+
+And we’ll integrate it with your current project
+
+This is the important part.
+
+I don’t want to give you a completely separate AI course that you forget after two weeks.
+
+We’ll progressively add GenAI to the framework we’re already building:
+
+                    YOUR SDET PROJECT
+                           │
+          ┌────────────────┼─────────────────┐
+          ▼                ▼                 ▼
+     Automation          CI/CD             GenAI
+          │                │                 │
+     Playwright         GitHub            LLMs
+     Cucumber           Jenkins             │
+     TypeScript         Docker              │
+     POM                                     ▼
+                                      AI Test Assistant
+                                             │
+                                  ┌──────────┼──────────┐
+                                  ▼          ▼          ▼
+                              Generator   Failure    Review
+                                          Analysis
+
+That gives you one coherent industry-ready portfolio project.
+
+And I want you to learn the thinking, not just the commands.
+
+We’ve already been doing that with:
+
+Browser → Session → Context → Page
+
+and:
+
+Jenkins = orchestrator
+Docker = execution environment
+
+We’ll use the same approach with GenAI:
+
+LLM → context → tools → retrieval → action → validation
+
+That way, when an interviewer asks “How would you design an AI-powered testing framework?”, you’ll be able to reason through the architecture instead of memorizing an answer.
+
+For now, let the Jenkins Docker image finish building. We won’t mix the two tracks yet—we’ll finish getting your CI pipeline working, then start adding GenAI to it systematically.
