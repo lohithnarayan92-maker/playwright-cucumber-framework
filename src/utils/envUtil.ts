@@ -3,7 +3,7 @@ export function getEnv(name: string): string {
 
     if (!value) {
         throw new Error(
-            `❌ Required environment variable '${name}' is missing in .env`
+            `❌ Required environment variable '${name}' is missing `
         );
     }
 
