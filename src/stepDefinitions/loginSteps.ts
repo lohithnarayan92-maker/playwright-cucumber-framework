@@ -14,7 +14,9 @@ When("the user logs in with valid credentials", async function (this: CustomWorl
 
     const loginPage = new LoginPage(this.session.page);
 
-    await loginPage.login("Admin", "admin123");
+    await loginPage.login(process.env.TEST_USERNAME!,
+
+    process.env.TEST_PASSWORD!);
 
 });
 
