@@ -10,20 +10,20 @@ setDefaultTimeout(Config.timeout);
 
 Before({ timeout: Config.timeout }, async function (this: CustomWorld) {
 
-    console.log("1. Before Hook Started");
+   console.log("1. Before Hook Started");
 
-    this.browser = await BrowserManager.launchBrowser();
+this.browser = await BrowserManager.launchBrowser();
 
 this.session = await BrowserManager.createUserSession(this.browser);
 
-    console.log("Base URL =", Config.baseUrl);
-    // await this.page.goto(Config.baseUrl, {
-    // waitUntil: "domcontentloaded"
-    await this.session.page.goto(Config.baseUrl, {
+console.log("2. Base URL =", Config.baseUrl);
+console.log("3. Starting page.goto()");
+
+await this.session.page.goto(Config.baseUrl, {
     waitUntil: "domcontentloaded"
 });
 
-console.log("5. URL Loaded");
+console.log("4. URL Loaded");
 });
 
 After(async function (this: CustomWorld) {

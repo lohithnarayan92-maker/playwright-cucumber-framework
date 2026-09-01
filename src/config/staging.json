@@ -1,0 +1,6 @@
+{
+    "baseUrl": "",
+    "browser": "chromium",
+    "headless": true,
+    "timeout": 30000
+}

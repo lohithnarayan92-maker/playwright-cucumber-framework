@@ -1,16 +1,13 @@
 import { UserSession } from "./UserSession";
 import { chromium, Browser, BrowserContext, Page } from "@playwright/test";
-import { getEnv } from "../utils/envUtil";
-
+import { Config } from "../config/config";
 
 export class BrowserManager {
 
     static async launchBrowser(): Promise<Browser> {
 
-        const headless = getEnv("HEADLESS") === "true";
-
         const browser = await chromium.launch({
-            headless: headless
+            headless: Config.headless
         });
 
         return browser;
